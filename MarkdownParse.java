@@ -21,7 +21,7 @@ public class MarkdownParse {
                 continue;
             }
             if(openParen == -1){
-                return toReturn;
+                currentIndex = closeParen +1;
             }
             toReturn.add(markdown.substring(openParen + 1, closeParen));
             //System.out.println(markdown.charAt(currentIndex));
