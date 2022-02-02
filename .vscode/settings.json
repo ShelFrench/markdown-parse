@@ -1,5 +1,7 @@
 {
     "java.project.sourcePaths": [
-        "."
-    ]
+        ".",
+        "lib"
+    ],
+    "java.maxConcurrentBuilds": 5
 }
