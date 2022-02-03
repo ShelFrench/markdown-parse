@@ -1,3 +1,1 @@
-[link]thanks
-
-[linthis](this.com)
+[link]
