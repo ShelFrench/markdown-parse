@@ -20,7 +20,7 @@ public class MarkdownParseTest {
         Path fileName = Path.of("test-file.md");
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
-        assertEquals(List.of("https://something.com", "some-page.html"),links);
+        assertEquals(List.of("https://something", "some-page.html"),links);
     }
 
     @Test
