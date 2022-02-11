@@ -20,7 +20,7 @@ public class MarkdownParseTest {
         Path fileName = Path.of("test-file.md");
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
-        assertEquals(List.of("https://something", "some-page.html"),links);
+        assertEquals(List.of("https://something.com", "some-page.html"),links);
     }
 
     @Test
@@ -28,7 +28,7 @@ public class MarkdownParseTest {
         Path fileName = Path.of("test-file2.md");
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
-        assertEquals(List.of("https://.com"),links);
+        assertEquals(List.of("https://google.com"),links);
     }
     
     @Test
@@ -43,7 +43,7 @@ public class MarkdownParseTest {
     public void fourthTest() throws IOException{
         Path fileName = Path.of("noParen.md");
 	    String contents = Files.readString(fileName);
-        ArrayList<String> links = MarkdownParse.getLinks(contents);
+        ArrayList<String> links = MarkdownParse.getLinks(contents); 
         assertEquals(List.of(),links);
     }
 }
