@@ -43,7 +43,7 @@ public class MarkdownParseTest {
     public void fourthTest() throws IOException{
         Path fileName = Path.of("noParen.md");
 	    String contents = Files.readString(fileName);
-        ArrayList<String> links = MarkdownParse.getLinks(contents); 
+        ArrayList<String> links = MarkdownParse.getLinks(contents);
         assertEquals(List.of(),links);
     }
 }
